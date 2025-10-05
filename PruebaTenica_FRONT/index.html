@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<button id="logoutBtn">Cerrar sesión</button>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>📦 Gestión de Productos</h1>
+
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Buscar por nombre o SKU..." />
+        <button id="btnSearch">Buscar</button>
+    </section>
+
+    <section class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>SKU</th>
+                    <th>Cantidad</th>
+                    <th>Precio Venta</th>
+                    <th>Precio Costo</th>
+                    <th>Fecha Modificación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productsTableBody"></tbody>
+        </table>
+    </section>
+
+    <section class="pagination-section">
+        <button id="prevPage">⬅️ Anterior</button>
+        <span id="pageInfo">Página 1</span>
+        <button id="nextPage">➡️ Siguiente</button>
+    </section>
+
+    <section class="create-section">
+        <h2 id="formTitle">Crear nuevo producto</h2>
+
+        <form id="createForm">
+            <input type="hidden" id="idProduct" />
+
+            <input type="text" id="nameProduct" placeholder="Nombre del producto" required maxlength="100" />
+            <input type="text" id="sku" placeholder="SKU (Código)" required />
+            <input type="number" id="quantity" placeholder="Cantidad" required min="0" />
+            <input type="number" id="priceSale" placeholder="Precio de venta" required step="0.01" min="0" />
+            <input type="number" id="priceCost" placeholder="Precio de costo" step="0.01" min="0" />
+
+            <button type="submit" id="btnCreate">Crear producto</button>
+            <button type="button" id="btnUpdate" style="display:none;">Guardar cambios</button>
+            <button type="button" id="btnCancel" style="display:none;">Cancelar</button>
+        </form>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
