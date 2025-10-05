@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+Debug/
+Release/
+
+# Dependencias JS
+node_modules/
+
+# Logs y temporales
+*.log
+*.tmp
+*.cache
+*.db
+
+# Archivos locales
+*.env
+*.config
